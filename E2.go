@@ -29,6 +29,10 @@ func main() {
 				return
 			}
 			win.WriteEvent(ev)
+
+			if (ev.C2 == 'x' || ev.C2 == 'X') && string(ev.Text) == "Put" {
+				win.Del(true)
+			}
 		}
 	}
 }
